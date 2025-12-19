@@ -1,15 +1,42 @@
-// subtle gold dust in hero using animated gif overlay
-(() => {
-  const hero = document.querySelector('.hero');
-  if (!hero) return;
-  const layer = document.createElement('div');
-  layer.style.position = 'absolute';
-  layer.style.inset = '0';
-  layer.style.pointerEvents = 'none';
-  layer.style.backgroundImage = 'url("assets/img/gold-dust.gif")';
-  layer.style.backgroundSize = 'cover';
-  layer.style.backgroundPosition = 'center';
-  layer.style.mixBlendMode = 'screen';
-  layer.style.opacity = '0.38';
-  hero.appendChild(layer);
+// Modal full-image viewer
+(function () {
+  const modal = document.getElementById("imgModal");
+  if (!modal) return;
+
+  const modalImg = document.getElementById("modalImg");
+  const modalTitle = document.getElementById("modalTitle");
+  const closeBtn = document.getElementById("modalClose");
+
+  function openModal(src, title) {
+    modal.classList.add("open");
+    modalImg.src = src;
+    modalImg.alt = title || "Artwork";
+    modalTitle.textContent = title || "Artwork";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("open");
+    modalImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-full]");
+    if (!btn) return;
+
+    const src = btn.getAttribute("data-full");
+    const title = btn.getAttribute("data-title") || "";
+    openModal(src, title);
+  });
+
+  closeBtn?.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
 })();
