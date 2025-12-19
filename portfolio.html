@@ -35,7 +35,7 @@
       <div class="grid" style="margin-top:16px;">
 
         <article class="card">
-          <div class="thumb" style="background-image:url('img/art1.png');"></div>
+          <div class="thumb" style="background-image:url('img/hero-collage.png');"></div>
           <div class="cardbody">
             <h3>Composition Study (Principles of Design)</h3>
             <div class="meta">
@@ -43,13 +43,18 @@
               <span class="pill">Contrast</span><span class="pill">Placement</span><span class="pill">Scale</span>
             </div>
             <p class="sub" style="margin-top:10px;">
-              (Write why you chose it + elements/principles.)
+              I chose this piece because it clearly demonstrates my understanding of composition and visual hierarchy.
+              I used contrast and placement to create a strong focal point and guide the viewer’s eye through the design.
+              The scale of the elements helps establish emphasis while maintaining balance across the composition.
             </p>
+            <button class="view-full" data-full="img/hero-collage.png" data-title="Composition Study (Principles of Design)">
+              View full image
+            </button>
           </div>
         </article>
 
         <article class="card">
-          <div class="thumb" style="background-image:url('img/hero-collage.png');"></div>
+          <div class="thumb" style="background-image:url('img/art1.png');"></div>
           <div class="cardbody">
             <h3>Collage / Poster Design</h3>
             <div class="meta">
@@ -57,8 +62,13 @@
               <span class="pill">Emphasis</span><span class="pill">Value</span><span class="pill">Balance</span>
             </div>
             <p class="sub" style="margin-top:10px;">
-              (Write why you chose it + elements/principles.)
+              I selected this artwork because it shows my ability to combine multiple visual elements into a unified design.
+              I focused on balance and value to make sure the main subject stands out while the background supports it.
+              This piece helped me practice emphasis and organization without making the composition feel cluttered.
             </p>
+            <button class="view-full" data-full="img/art1.png" data-title="Collage / Poster Design">
+              View full image
+            </button>
           </div>
         </article>
 
@@ -71,14 +81,30 @@
               <span class="pill">Color</span><span class="pill">Rhythm</span><span class="pill">Movement</span>
             </div>
             <p class="sub" style="margin-top:10px;">
-              (Write why you chose it + elements/principles.)
+              I chose this poster because it strongly represents my use of color, rhythm, and movement.
+              The repeated running figures create a sense of motion, while the bold color choices add energy to the design.
+              The central lightning symbol creates emphasis and ties the composition together visually.
             </p>
+            <button class="view-full" data-full="img/art-banner.png" data-title="Speed of Light Poster">
+              View full image
+            </button>
           </div>
         </article>
 
       </div>
     </div>
   </section>
+
+  <!-- Modal for full image viewing -->
+  <div class="modal" id="imgModal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+      <div class="modal-top">
+        <div class="modal-title" id="modalTitle">Artwork</div>
+        <button class="modal-close" id="modalClose">Close</button>
+      </div>
+      <img class="modal-img" id="modalImg" src="" alt="">
+    </div>
+  </div>
 
   <footer>
     <div class="wrap">
