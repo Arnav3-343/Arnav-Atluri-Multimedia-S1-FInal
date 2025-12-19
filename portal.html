@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portal Map | Arnav Atluri</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <div class="nav">
+    <div class="wrap">
+      <div class="brand"><span class="dot"></span><strong>Arnav Atluri • Multimedia</strong></div>
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a class="active" href="portal.html">Portal Map</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="video.html">Video</a>
+        <a href="cultural.html">Cultural</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="pagehero">
+    <div class="wrap">
+      <h1 class="page-title">Portal Map</h1>
+      <p class="sub">Click a relic to open a chamber (page).</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="tomb-map">
+        <div class="gallery" role="img" aria-label="Exodia gallery with clickable paintings">
+          <!-- Center (Portfolio) -->
+          <a class="hotspot" href="portfolio.html"
+             style="left: 35%; top: 14%; width: 30%; height: 56%;"
+             aria-label="Open Portfolio"></a>
+
+          <!-- Left Arm (Video) -->
+          <a class="hotspot" href="video.html"
+             style="left: 4%; top: 8%; width: 26%; height: 36%;"
+             aria-label="Open Video"></a>
+
+          <!-- Right Arm (About Me) -->
+          <a class="hotspot" href="about.html"
+             style="left: 70%; top: 8%; width: 26%; height: 36%;"
+             aria-label="Open About Me"></a>
+
+          <!-- Left Leg (Multimedia) -->
+          <a class="hotspot" href="multimedia.html"
+             style="left: 6%; top: 48%; width: 26%; height: 40%;"
+             aria-label="Open Multimedia"></a>
+
+          <!-- Right Leg (Cultural) -->
+          <a class="hotspot" href="cultural.html"
+             style="left: 68%; top: 48%; width: 26%; height: 40%;"
+             aria-label="Open Cultural Art Unit"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div>© <span id="year"></span> Arnav Atluri • Multimedia Portfolio</div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+</body>
+</html>
